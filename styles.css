@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+:root
+{
+    --lightgreen: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 56%);
+
+    --white: hsl(0, 0%, 100%);
+    --mediumgrey: hsl(186, 15%, 59%);
+    --darkgrey: hsl(187, 24%, 22%);
+    --font: "Karla", sans-serif;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightgreen);
+}
+.box
+{
+    position: relative;
+    width: 600px;
+    background-color: var(--white);
+    padding: 2em;
+    border-radius: 0.8em;
+}
+.box form
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.box form h2
+{
+    font-weight: 700;
+    color: var(--darkgrey);
+}
+form label
+{
+    color: var(--darkgrey);
+}
+form span
+{
+    color: var(--green);
+}
+form .name
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+}
+form .name  #firstname, #lastname
+{
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+    border: 1px solid var(--mediumgrey);
+    outline: none;
+    margin-bottom: 0.5em;
+    font-family: var(--font);
+    font-size: 1em;
+}
+form .name  #firstname:hover, #lastname:hover
+{
+    border-color: var(--green);
+    cursor: pointer;
+}
+form .email #email
+{
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 1px solid var(--mediumgrey);
+    border-radius: 0.5em;
+    outline: none;
+    margin-bottom: 0.5em;
+    font-family: var(--font);
+    font-size: 1em
+}
+form .email #email:hover
+{
+    border-color: var(--green);
+}
+form .query
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+form .query .query-inner
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+form .query .query-inner .one, .two
+{
+    border: 1px solid var(--mediumgrey);
+    padding: 0.8em 1.2em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+form .query .query-inner .one input, label
+{
+    cursor: pointer;
+}
+form .query .query-inner .two input
+{
+    cursor: pointer;
+}
+form .query .query-inner .one:hover, .two:hover
+{
+    border-color: var(--green);
+}
+form .message
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+form .message textarea
+{
+    border: 1px solid var(--mediumgrey);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    outline: none;
+    font-family: var(--font);
+    font-size: 1em;
+}
+form .message textarea:hover
+{
+    border-color: var(--green);
+}
+form .agreement
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+form .agreement div
+{
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+form .button
+{
+    position: relative;
+    width: 100%;
+}
+form .button #submitBtn
+{
+    width: 100%;
+    padding: 1em;
+    font-weight: 600;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5em;
+}
+form p
+{
+    display: none;
+    color: var(--red);
+    font-size: 0.9em;
+}
+#general, #support, #checkbox
+{
+    display: none;
+}
+.general-radio, .support-radio
+{
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--mediumgrey);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.general-radio img, .support-radio img
+{
+    width: 100%;
+}
+.checkbox
+{
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--mediumgrey);
+    border-radius: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.checkbox img
+{
+    width: 100%;
+}
+.successMsg
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: var(--darkgrey);
+    z-index: 1000;
+    padding: 1.5em;
+    border-radius: 1em;
+}
+.successMsg .inner
+{
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+    align-items: center;
+}
+.successMsg .inner p
+{
+    font: 1.5em;
+    font-weight: 700;
+    color: var(--white);
+}
+.successMsg p
+{
+    color: var(--mediumgrey);
+}
+/* Media query */
+@media (max-width: 450px){
+    .box
+    {
+        width: 90%;
+    }
+    form .name
+    {
+        grid-template-columns: 1fr;
+    }
+    form .query .query-inner
+    {
+        grid-template-columns: 1fr;
+    }
+}

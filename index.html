@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contact form</title>
+</head>
+<body>
+
+  <div class="successMsg">
+    <div class="inner">
+      <img src="./assets/images/icon-success-check.svg" alt="Success">
+      <p>Message Sent!</p>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <div class="box">
+    <form>
+      <h2>Contact Us</h2>
+      <div class="name">
+        <label for="firstname">First Name <span>*</span>
+          <input type="text" name="firstname" id="firstname">
+          <p class="firstname-error errorMsg">This field is required</p>
+        </label>
+        <label for="lastname">Last Name <span>*</span>
+          <input type="text" name="lastname" id="lastname">
+          <p class="lastname-error errorMsg">This field is required</p>
+        </label>
+      </div>
+      <div class="email">
+        <label for="email">Email Address <span>*</span>
+          <input type="text" name="email" id="email">
+          <p class="email-error errorMsg">Please enter a valid email address</p>
+        </label>
+      </div>
+      <div class="query">
+        <label for="query">Query Type <span>*</span></label>
+        <div class="query-inner">
+          <div class="one">
+            <!-- <input type="radio" name="radiogroup" id="general"> -->
+            <div class="general-radio">
+              <img src="./assets/images/icon-radio-selected.svg" alt="general radio" id="general">
+            </div>
+            <label for="general">General Enquiry</label>
+          </div>
+          <div class="two">
+            <!-- <input type="radio" name="radiogroup" id="support"> -->
+            <div class="support-radio">
+              <img src="./assets/images/icon-radio-selected.svg" alt="support radio" id="support">
+            </div>
+            <label for="support">Support Enquiry</label>
+          </div>
+          <p class="radio-error errorMsg">Please select a query type</p>
+        </div>
+      </div>
+      <div class="message">
+        <label for="message">Message <span>*</span></label>
+        <textarea name="message" id="message" rows="5" cols="3" style="resize: none;"></textarea>
+        <p class="msg-error errorMsg">This field is required</p>
+      </div>
+      <div class="agreement">
+        <div>
+          <!-- <input type="checkbox" id="checkbox" name="checkbox"> -->
+          <div class="checkbox">
+            <img src="./assets/images/icon-checkbox-check.svg" alt="Checkbox" id="checkbox">
+          </div>
+          <label for="checkbox" id="agreement">I consent to being contacted by the team <span>*</span></label>
+        </div>
+        <p class="check-error errorMsg">To submit this form, please consent to being contacted</p>
+      </div>
+      <div class="button">
+        <input type="submit" value="Submit" id="submitBtn">
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+
+
+<!-- 
+  Contact Us
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
