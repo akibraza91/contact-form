@@ -79,7 +79,7 @@ myForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     allFields();
-    if(firsName.value.trim() == "" || lastName.value.trim() == "" || email.value.trim() == "" ||
+    if(firsName.value.trim() == "" || lastName.value.trim() == "" || emailValidate(email.value) === false ||
     message.value.trim() == "" || !generalParent.parentNode.classList.contains('active') || checkBox.style.display == "none"){
         console.log('Required all fields')
     }else{
