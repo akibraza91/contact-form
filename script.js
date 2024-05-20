@@ -80,7 +80,7 @@ myForm.addEventListener("submit", (e) => {
 
     allFields();
     if(firsName.value.trim() == "" || lastName.value.trim() == "" || emailValidate(email.value) === false ||
-    message.value.trim() == "" || !generalParent.parentNode.classList.contains('active') || checkBox.style.display == "none"){
+    message.value.trim() == "" || !generalParent.parentNode.classList.contains('active') || checkBox.style.display == false){
         console.log('Required all fields')
     }else{
         console.log("all fields are filled")
