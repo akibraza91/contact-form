@@ -1,4 +1,4 @@
-# Frontend Mentor - Contact form solution
+# Contact form solution
 
 This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Visit](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj)
+- Solution URL: [Visit](https://www.frontendmentor.io/solutions/responsive-contact-form-using-flexbox-and-grid-layout-a_hbsG3UIA)
 - Live Site URL: [Visit](https://akibraza91.github.io/contact-form/)
 
 ## My process
